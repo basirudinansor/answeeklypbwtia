@@ -14,9 +14,27 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home', [
+        "title" => "Home",
+    ]);
 });
 
 Route::get('/profile', function () {
-    return view('profile');
+    return view('profile', [
+        "title" => "Profile",
+        "name" => "Basirudin Ansor",
+        "nim" => "A12312345678",
+        "prodi" => "Teknologi Informasi",
+        "gambar" => "ans.jpeg",
+    ]);
+});
+
+Route::get('/berita', function () {
+    return view('berita', [
+        "title" => "Berita",
+    ]);
+});
+
+Route::get('/contact', function () {
+    return view('contact');
 });
